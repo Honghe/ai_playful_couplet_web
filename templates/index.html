@@ -1,0 +1,29 @@
+<!doctype html>
+<head>
+    <meta charset="UTF-8">
+    <title>AI对联</title>
+</head>
+<style>
+    .content {
+        max-width: 960px;
+        margin: auto;
+    }
+</style>
+<body>
+<div class="content">
+    <h1>AI对联</h1>
+    <form action="/" method="get">
+        <div>
+            <input name="couplet" type="text">
+            <input type="submit" value="对下联">
+        </div>
+    </form>
+    <div>
+        {% if couplet_left %}
+            <div>上联：{{ couplet_left }}</div>
+            <div>下联：{{ couplet_right }}</div>
+        {% endif %}
+    </div>
+</div>
+</body>
+</html>
